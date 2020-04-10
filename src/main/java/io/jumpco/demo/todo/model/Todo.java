@@ -101,7 +101,7 @@ public class Todo {
     @Enumerated(EnumType.STRING)
     private CheckEnum checkEnum;
 
-    
+
     @Override
     public String toString() {
         return new StringJoiner(", ", Todo.class.getSimpleName() + "[", "]")
