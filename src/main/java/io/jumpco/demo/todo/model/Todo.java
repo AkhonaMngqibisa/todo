@@ -98,8 +98,8 @@ public class Todo {
 
 
     //------Annotate an enum field so that it is stored as a string in the database.-----------
-    @Enumerated(EnumType.STRING)
-    private CheckEnum checkEnum;
+   // @Enumerated(EnumType.STRING)
+    //private CheckEnum checkEnum;
 
 
     @Override

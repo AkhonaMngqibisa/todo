@@ -13,6 +13,38 @@
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<style type ="text/css">
+    body
+    {
+        background-image: url("/image/photo-7.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-color: white;
+        text-align: center;
+    }
+    .navbar{
+        background-color:black;
+        navbar:center;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size:100%;
+    }
+    .topnav-centered{
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+
+
+
+
+
+
 <jsp:include page="/WEB-INF/jsp/nav-bar.jsp"/>
 <div class="container col-9">
     <form:form action="${pageContext.request.contextPath}/todo/${mode}" method="post" modelAttribute="todo">
