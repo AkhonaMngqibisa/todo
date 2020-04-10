@@ -1,10 +1,6 @@
 package io.jumpco.demo.todo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.StringJoiner;
@@ -100,6 +96,12 @@ public class Todo {
         return result;
     }
 
+
+    //------Annotate an enum field so that it is stored as a string in the database.-----------
+    @Enumerated(EnumType.STRING)
+    private CheckEnum checkEnum;
+
+    
     @Override
     public String toString() {
         return new StringJoiner(", ", Todo.class.getSimpleName() + "[", "]")

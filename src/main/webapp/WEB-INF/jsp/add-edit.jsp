@@ -49,7 +49,7 @@
             <td><form:label path = "options">Option</form:label></td>
             <td>
                 <form:select path = "options">
-                    <form:option value = "NONE" label = "Select"/>
+                    <form:option value = "NONE" label = "--Select--"/>
                     <form:options items = "${optionsList}" />
                 </form:select>
             </td>
