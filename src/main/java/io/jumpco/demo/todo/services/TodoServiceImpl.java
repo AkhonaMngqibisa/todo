@@ -59,11 +59,18 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public Todo complete(Long id) throws EntityNotFoundException {
         Optional<Todo> existing = todoRepository.findById(id);
-        if (!existing.isPresent()) {
-            throw new EntityNotFoundException("Cannot find Todo " + id);
+        try {
+
+            if (!existing.isPresent()) {
+                throw new EntityNotFoundException("Cannot find Todo " + id);
+            }
+            Assert.isTrue(!existing.get().getCompleted(), "Item was already completed");
+            existing.get().setCompleted(true);
         }
-        Assert.isTrue(!existing.get().getCompleted(), "Item was already completed");
-        existing.get().setCompleted(true);
+        catch(Exception e)
+        {
+
+        }
         return todoRepository.save(existing.get());
     }
 

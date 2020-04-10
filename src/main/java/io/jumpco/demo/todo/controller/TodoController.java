@@ -5,15 +5,17 @@ import io.jumpco.demo.todo.model.Todo;
 import io.jumpco.demo.todo.model.TodoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class TodoController {
@@ -100,4 +102,34 @@ public class TodoController {
         result.addObject("todos", todoService.list(null));
         return result;
     }
+//-------------------------------------------
+
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public ModelAndView add() {
+        Todo add = new Todo();
+
+        ModelAndView modelAndView = new ModelAndView("index", "command", add);
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public String create(@ModelAttribute("SpringWeb")Todo add, ModelMap model)
+    {
+
+        model.addAttribute("options", add.getOptions());
+        return "index";
+    }
+
+
+    @ModelAttribute("optionsList")
+    public Map<String, String> getOptionsList() {
+        Map<String, String> optionsList = new HashMap<String, String>();
+        optionsList.put("B","Bug");
+        optionsList.put("Enh", "Enhancement");
+        optionsList.put("M", "Maintenance");
+        optionsList.put("T", "Task");
+        optionsList.put("Fe","Feature");
+        return optionsList;
+    }
+
 }

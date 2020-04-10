@@ -69,6 +69,19 @@ public class Todo {
         this.order = order;
     }
 
+
+    //----------------------Try this---------------------------------
+    private String options;
+    @NotNull
+    public String getOptions() {
+        return options;
+    }
+
+    public void setOptions(String options) {
+        this.options = options;
+    }
+    //------------------------------------------------------
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -1,6 +1,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+
+<!----- Adding Background Colour -->
+<div style="background-color:#A9A9A9;
+    background-attachment: scroll;">
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +28,7 @@
             <th scope="col"><label>Title</label></th>
             <th scope="col"><label>Completed</label></th>
             <th scope="col"><label>Action</label></th>
+            <th scope="col"><label>Option </label></th>
         </tr>
         </thead>
         <tbody>
@@ -42,9 +48,13 @@
                     <a class="btn btn-secondary" href="${pageContext.request.contextPath}/todo/delete/${todo.id}">Delete</a>
                 </div>
             </td>
+            <td>
+                   ${todo.options}
+            </td>
         </tr>
         </c:forEach>
     </table>
 </div>
 </body>
 </html>
+</div>
