@@ -77,6 +77,17 @@ public class Todo {
         this.options = options;
     }
     //------------------------------------------------------
+    //----------------------Try this KB---------------------------------
+    private String KB;
+    @NotNull
+    public String getKB() {
+        return KB;
+    }
+
+    public void setKB(String KB) {
+        this.KB = KB;
+    }
+    //------------------------------------------------------
 
     @Override
     public boolean equals(Object o) {

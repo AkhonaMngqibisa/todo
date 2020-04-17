@@ -1,8 +1,6 @@
 package io.jumpco.demo.todo.controller;
 
-import io.jumpco.demo.todo.model.EntityNotFoundException;
-import io.jumpco.demo.todo.model.Todo;
-import io.jumpco.demo.todo.model.TodoService;
+import io.jumpco.demo.todo.model.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -12,10 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class TodoController {
@@ -117,6 +112,8 @@ public class TodoController {
     {
 
         model.addAttribute("options", add.getOptions());
+        model.addAttribute("KB", add.getKB());
+
         return "index";
     }
 
@@ -131,5 +128,18 @@ public class TodoController {
         optionsList.put("Fe","Feature");
         return optionsList;
     }
+
+    //-------------------------------------------KB List
+
+    @ModelAttribute("KBList")
+    public Map<String, String> getKBList() {
+        Map<String, String> KBList = new HashMap<String, String>();
+        KBList.put("T","Todo");
+        KBList.put("InP", "In Progress");
+        KBList.put("D", "Done");
+
+        return KBList;
+    }
+
 
 }

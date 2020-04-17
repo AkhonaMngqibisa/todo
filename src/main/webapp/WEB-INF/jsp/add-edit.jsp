@@ -75,18 +75,33 @@
                 <form:errors class="alert alert-danger" role="alert" path="description"></form:errors>
             </div>
         </div>
-
+        <!---------------------------- Options -------------------   -->
         <div class="form-group offset-1 col-10">
             <tr>
             <td><form:label path = "options">Option</form:label></td>
             <td>
                 <form:select path = "options">
-                    <form:option value = "NONE" label = "--Select--"/>
+                    <form:option value = "NONE" label = "Select"/>
                     <form:options items = "${optionsList}" />
                 </form:select>
             </td>
             </tr>
         </div>
+
+
+        <!---------------------------- KB -------------------   -->
+        <div class="form-group offset-1 col-10">
+            <tr>
+                <td><form:label path = "KB">Level</form:label></td>
+                <td>
+                    <form:select path = "KB">
+                        <form:option value = "NONE" label = "Select"/>
+                        <form:options items = "${KBList}" />
+                    </form:select>
+                </td>
+            </tr>
+        </div>
+
 
 
 

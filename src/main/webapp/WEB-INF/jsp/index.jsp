@@ -14,6 +14,34 @@
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+
+<style type ="text/css">
+    body
+    {
+        background-image: url("/image/ba.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-color: white;
+        text-align: center;
+    }
+    .navbar{
+        background-color:black;
+        navbar:center;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size:100%;
+    }
+    .topnav-centered{
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+
 <jsp:include page="/WEB-INF/jsp/nav-bar.jsp"/>
 <div class="container-fluid">
     <div class="row mt-4">
@@ -29,6 +57,8 @@
             <th scope="col"><label>Completed</label></th>
             <th scope="col"><label>Action</label></th>
             <th scope="col"><label>Option </label></th>
+            <th scope="col"><label>Kandban Board </label></th>
+
         </tr>
         </thead>
         <tbody>
@@ -51,6 +81,10 @@
             <td>
                    ${todo.options}
             </td>
+            <td>
+                    ${todo.KB}
+            </td>
+
         </tr>
         </c:forEach>
     </table>
