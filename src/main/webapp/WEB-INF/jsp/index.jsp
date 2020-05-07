@@ -99,15 +99,12 @@
         this.MaterialProgress.setProgress(44);
     });
 </script>
-<div class="kanban__title">
-    <h1><center> To do list </center></h1>
-</div>
-<div class="dd">
+
 
 
 
     <ol class="kanban ready">
-        <h2> Ready</h2>
+        <h3> Ready</h3>
         <li class="dd-item" data-id="5">
             <div class="text" contenteditable="true">This is Ready</div><div class="actions"></div>
         </li>
@@ -115,19 +112,16 @@
 
 
     <ol class="kanban inprogress">
-        <h2>In progress</h2>
+        <h3>In-Progress</h3>
         <li class="dd-item" data-id="5">
             <div class="text" contenteditable="true">Title: System  Development</div><div class="actions"></div>
 
         </li>
-        <li class="dd-item" data-id="5">
-            <div class="text" contenteditable="true">Description: This book is about the basics of programing</div><div class="actions"></div>
 
-        </li>
     </ol>
 
     <ol class="kanban done">
-        <h2> Done</h2>
+        <h3> Done</h3>
         <li class="dd-item" data-id="5">
             <div class="text" contenteditable="true">This is Done</div><div class="actions"></div>
         </li>

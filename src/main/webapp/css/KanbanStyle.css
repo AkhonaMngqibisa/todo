@@ -135,33 +135,6 @@ button.addbutt {
     max-width: 330px;
 }
 
-button:active, button:focus {box-shadow: 0 0 0 0, 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .12);color:#00838F;}
-button {
-    align-items: center;
-    background-color: #EEEEEE;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    color: #607D8B;
-    position: relative;
-    margin: 0;
-    min-width: 44px;
-    padding: 10px 16px;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-ol.kanban.To-do {
-    border-top: 5px solid #FFB300;
-}
-
 ol.kanban.Gone {
     border-top: 5px solid #FF3D00;
 }
@@ -175,7 +148,8 @@ ol.kanban.Done {
 }
 
 ol.kanban {
-    border-top: 5px solid #78909C;
+    border-top: 5px solid #157DEC;
+    border-bottom: 5px solid #157DEC;
     width: 20%;
     height: auto;
     margin: 1%;
@@ -215,24 +189,9 @@ ol.kanban {
     box-sizing: border-box;
 }
 
-.title {
-    align-self: flex-end;
-    color: inherit;
-    display: block;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 24px;
-    line-height: normal;
-    overflow: hidden;
-    -webkit-transform-origin: 149px 48px;
-    transform-origin: 149px 48px;
-    margin: 0;
-}
 
 .text {
-    color: grey;
-    border-top: 1px solid ;font-size: 1rem;
+    color: black;
     font-weight: 400;
     line-height: 18px;
     overflow: hidden;
